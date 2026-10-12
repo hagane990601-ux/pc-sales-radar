@@ -35,3 +35,13 @@ API接続・更新競合防止・差分同期のテストが完了するまで�
 - URLは公開HTTPSのものだけを出力
 - CSV数式インジェクション対策を適用
 - 公開データと社内営業データを混ぜない
+
+## 5. GitHub Actions自動同期（2026-10-12追加）
+- `scripts/sync_google_sheets.py` を追加し、日次ワークフローで実行。
+- GitHub Repository Secret: `GOOGLE_SERVICE_ACCOUNT_JSON` （ユーザーが設定、コードには保存しない）
+- シートID: `1-iFtaZCt5oIRw_3HR1PUDBuLo3Uj0DHr15BiYIfAE9Q`
+- Sheets APIで `公開案件_自動`、`候補_自動`、`収集ログ_自動` の3タブのみ作成・上書き。既存の他タブは変更しない。
+- 同期失敗時はWebサイト公開処理を止めず、GitHub Actionsの同期ステップに失敗が表示される。
+- テスト: `python -m unittest discover -s tests -p "test_*.py"`
+- **実際のGoogle Sheets書き込み成否はActionsの該当ステップを確認すること。** GitHubの実行成功だけでは、`continue-on-error` のためSheets同期成功を保証しない。
+- この段階では、公式登録2件は原典照合が必要、ニュース候補は未検証であり、落札設計事務所などは未取得のまま。
