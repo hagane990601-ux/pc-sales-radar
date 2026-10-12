@@ -1,0 +1,5 @@
+{
+  "enabled": false,
+  "model": "gemini-2.5-flash-lite",
+  "message": "GitHub Actions secret GEMINI_API_KEY 未設定"
+}
