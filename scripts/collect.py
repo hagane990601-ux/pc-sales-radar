@@ -63,8 +63,21 @@ def published(raw):
         except ValueError:
             return ""
 
+def decode_xml(raw):
+    """Normalize Japanese RSS encodings before ElementTree parsing."""
+    mark = re.search(br'<\?xml[^>]*\bencoding\s*=\s*["\']([^"\']+)["\']', raw[:300], re.I)
+    if not mark:
+        return raw
+    charset = mark.group(1).decode("ascii", "replace")
+    if charset.lower().replace("-", "").replace("_", "") in ("utf8", "usascii"):
+        return raw
+    decoded = raw.decode(charset, errors="replace")
+    decoded = re.sub(r'(<\?xml[^>]*\bencoding\s*=\s*)["\'][^"\']+["\']',
+                     r'\1"UTF-8"', decoded, count=1, flags=re.I)
+    return decoded.encode("utf-8")
+
 def entries(raw):
-    doc = ET.fromstring(raw)
+    doc = ET.fromstring(decode_xml(raw))
     result = []
     for node in doc.iter():
         kind = local(node.tag)
@@ -123,6 +136,8 @@ def main():
             previous = old.get(key, {})
             content = title + " " + entry["summary"]
             area = next((a for a in AREAS if a in content), "")
+            if not area:
+                continue # Other areas are not part of the current six-area watch
             is_pdf = urlparse(entry["url"]).path.lower().endswith(".pdf")
             row = {
                 "id": key, "title": title, "summary": entry["summary"][:360],
