@@ -35,3 +35,7 @@
 `index.html` は検索UI、`scripts/collect.py` は公開RSS候補の収集、`scripts/gemini_enrich.py` は登録済み公式PDF解析、`tests/test_gemini.py` は外部通信なしの安全テスト。GitHub Actionsから毎日実行され、サイトを再デプロイします。
 
 **次の段階：** 入札ポータルごとに適切なアクセス方法を確認し、案件ID、正式案件名、落札設計事務所、地域、PDFを原典から抽出するコネクタを追加する。
+
+## Gemini接続テスト
+
+GitHubのRepository secretを設定した後、mainブランチへのプッシュで新しいワークフロー実行が起動します。公開PDFの取得・AI分析の成否は `ai_status.json` に記録されます。`ai_results.json` が空ならGeminiによる解析はまだ完了していません。
