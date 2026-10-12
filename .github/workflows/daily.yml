@@ -1,0 +1,55 @@
+name: PC案件レーダー 日次収集・サイト公開
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "23 22 * * *" # JST 07:23
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pc-sales-radar-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Python runtime
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect public RSS (no company files)
+        run: python scripts/collect.py
+      - name: Keep daily discovery history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json status.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update public RSS discoveries"
+            git push || echo "Unable to save history, deployment continues"
+          fi
+      - name: Stage site
+        run: |
+          mkdir -p public
+          cp index.html data.json status.json public/
+          touch public/.nojekyll
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Deploy site
+        id: deployment
+        uses: actions/deploy-pages@v4
