@@ -30,11 +30,17 @@ jobs:
           python-version: "3.12"
       - name: Collect public RSS (no company files)
         run: python scripts/collect.py
+      - name: Verify Gemini integration without credentials
+        run: python -m unittest discover -s tests -p "test_*.py"
+      - name: AI reading of allowlisted public PDFs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/gemini_enrich.py
       - name: Keep daily discovery history
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json status.json
+          git add data.json status.json ai_results.json ai_status.json
           if ! git diff --cached --quiet; then
             git commit -m "Update public RSS discoveries"
             git push || echo "Unable to save history, deployment continues"
@@ -42,7 +48,7 @@ jobs:
       - name: Stage site
         run: |
           mkdir -p public
-          cp index.html data.json status.json public/
+          cp index.html data.json status.json ai_results.json ai_status.json public/
           touch public/.nojekyll
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
