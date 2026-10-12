@@ -1,7 +1,18 @@
 {
-  "checked_at": "2026-10-12T11:55:59+00:00",
-  "enabled": false,
+  "checked_at": "2026-10-12T12:47:18+00:00",
+  "enabled": true,
   "model": "gemini-2.5-flash-lite",
-  "cached_count": 0,
-  "message": "GitHub Actions secret GEMINI_API_KEY 未設定"
+  "new_calls": 2,
+  "results": [],
+  "issues": [
+    {
+      "id": "official-miyasou-20260716",
+      "reason": "HTTP 404"
+    },
+    {
+      "id": "official-sagae-hospital-20260701",
+      "reason": "HTTP 404"
+    }
+  ],
+  "cached_count": 0
 }
