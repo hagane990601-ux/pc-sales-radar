@@ -1,5 +1,7 @@
 {
+  "checked_at": "2026-10-12T11:53:14+00:00",
   "enabled": false,
   "model": "gemini-2.5-flash-lite",
+  "cached_count": 0,
   "message": "GitHub Actions secret GEMINI_API_KEY 未設定"
 }
