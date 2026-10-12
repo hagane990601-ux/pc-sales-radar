@@ -153,7 +153,7 @@ def main():
             found[key] = row
     # Preserve prior discoveries temporarily if RSS endpoints are unavailable.
     cutoff = CUTOFF.date().isoformat()
-    merged = {k: v for k, v in old.items() if v.get("first_seen", "") >= cutoff}
+    merged = {k: v for k, v in old.items() if v.get("first_seen", "") >= cutoff and v.get("place") in AREAS}
     merged.update(found)
     # De-duplicate equivalent normalized headlines across separate RSS feeds.
     unique = {}
