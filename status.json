@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-10-12T08:08:12+00:00",
-  "collection_status": "一部取得失敗",
+  "checked_at": "2026-10-12T08:09:38+00:00",
+  "collection_status": "取得完了",
   "sources_ok": [
     {
       "name": "国土交通省 新着情報",
@@ -9,18 +9,17 @@
     {
       "name": "防衛省 更新情報",
       "entries": 254
-    }
-  ],
-  "sources_errors": [
+    },
     {
       "name": "東北・新潟 建築計画ニュース",
-      "error": "HTTP Error 503: Service Unavailable"
+      "entries": 76
     },
     {
       "name": "東京・北関東 建築計画ニュース",
-      "error": "HTTP Error 503: Service Unavailable"
+      "entries": 79
     }
   ],
-  "visible": 5,
+  "sources_errors": [],
+  "visible": 4,
   "baseline_status": "社内月次PDF照合は未接続。公開RSSの参考候補のみ"
 }
