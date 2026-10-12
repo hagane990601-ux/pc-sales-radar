@@ -1,19 +1,18 @@
 {
-  "checked_at": "2026-10-12T12:47:18+00:00",
+  "checked_at": "2026-10-12T12:50:20+00:00",
   "enabled": true,
   "model": "gemini-3.5-flash-lite",
   "new_calls": 2,
-  "results": [],
-  "issues": [
+  "results": [
     {
       "id": "official-miyasou-20260716",
-      "reason": "HTTP 404"
+      "mode": "analyzed"
     },
     {
       "id": "official-sagae-hospital-20260701",
-      "reason": "HTTP 404"
+      "mode": "analyzed"
     }
   ],
-  "cached_count": 0,
-  "message": "Gemini 3.5 Flash-Liteへ変更済み。次回実行で解析状態を更新"
+  "issues": [],
+  "cached_count": 2
 }

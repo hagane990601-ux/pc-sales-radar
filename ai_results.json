@@ -1,1 +1,36 @@
-[]
+[
+  {
+    "id": "official-miyasou-20260716",
+    "source_sha256": "1ca0c6a8a4e8773af88d564a2bf098c480daced6d6df6eca3bb1efc65f8a7a96",
+    "source_pdf_url": "https://www.city.sendai.jp/aoba-somu-somu/documents/miyasoukihonkeikakuhonpen.pdf",
+    "analyzed_at": "2026-10-12T12:50:20+00:00",
+    "ai_state": "AI抽出・要原資料確認",
+    "ai_model": "gemini-3.5-flash-lite",
+    "facts": {
+      "facility_use": "宮城総合支所庁舎及び宮城保健センター",
+      "planning_stage": "基本計画",
+      "structure_type": "鉄筋コンクリート造（一部プレストレストコンクリート）",
+      "span_information": "スパンは20m以下。柱が少ない大空間を確保",
+      "pc_evidence": "一部プレストレストコンクリートの採用により、柱の少ない大空間を確保することで、フレキシブルな空間形成が可能となり",
+      "proposal_hint": "大空間や長スパンが求められる部分において、プレストレストコンクリート（PC）梁やプレキャスト部材の採用による柱のない空間形成を提案するため原図を確認すべきである。",
+      "evidence": "24ページ、4. 各計画の及方針 (2) 構造計画 ③構造種別の比較検討"
+    }
+  },
+  {
+    "id": "official-sagae-hospital-20260701",
+    "source_sha256": "6722cd34821b2ca77666721fc428cbe91ea2d98f0403a0603ee2bd150aee501a",
+    "source_pdf_url": "https://www.pref.yamagata.jp/documents/52604/05_kihonkeikaku.pdf",
+    "analyzed_at": "2026-10-12T12:50:20+00:00",
+    "ai_state": "AI抽出・要原資料確認",
+    "ai_model": "gemini-3.5-flash-lite",
+    "facts": {
+      "facility_use": "病院",
+      "planning_stage": "整備基本計画",
+      "structure_type": "資料で確認できず",
+      "span_information": "資料で確認できず",
+      "pc_evidence": "資料で確認できず",
+      "proposal_hint": "原図において構造形式や大スパン・PC化の記載がないため、今後の基本設計段階における構造計画や梁伏図の特記事項を確認すべきである。",
+      "evidence": "ページ未特定"
+    }
+  }
+]
