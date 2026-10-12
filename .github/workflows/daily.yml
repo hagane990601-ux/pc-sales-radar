@@ -36,6 +36,14 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/gemini_enrich.py
+      - name: Sync public-only records to private Google Sheet
+        continue-on-error: true
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          GOOGLE_SHEET_ID: "1-iFtaZCt5oIRw_3HR1PUDBuLo3Uj0DHr15BiYIfAE9Q"
+        run: |
+          python -m pip install --disable-pip-version-check google-auth requests
+          python scripts/sync_google_sheets.py
       - name: Keep daily discovery history
         run: |
           git config user.name "github-actions[bot]"
