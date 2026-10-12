@@ -1,8 +1,26 @@
 {
-  "checked_at": null,
-  "baseline_status": "社内PDF照合は未接続",
-  "collection_status": "初期資料のみ・日次収集準備中",
-  "sources_ok": [],
-  "sources_errors": [],
-  "visible": 3
+  "checked_at": "2026-10-12T08:06:31+00:00",
+  "collection_status": "一部取得失敗",
+  "sources_ok": [
+    {
+      "name": "防衛省 更新情報",
+      "entries": 254
+    },
+    {
+      "name": "東北・新潟 建築計画ニュース",
+      "entries": 76
+    },
+    {
+      "name": "東京・北関東 建築計画ニュース",
+      "entries": 79
+    }
+  ],
+  "sources_errors": [
+    {
+      "name": "国土交通省 新着情報",
+      "error": "multi-byte encodings are not supported"
+    }
+  ],
+  "visible": 5,
+  "baseline_status": "社内月次PDF照合は未接続。公開RSSの参考候補のみ"
 }
