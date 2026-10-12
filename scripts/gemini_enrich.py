@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parent.parent
 INPUT = ROOT / "official_documents.json"
 OUT = ROOT / "ai_results.json"
 HEALTH = ROOT / "ai_status.json"
-MODEL = "gemini-2.5-flash-lite"
+MODEL = "gemini-3.5-flash-lite"
 HOSTS = {"www.city.sendai.jp", "www.pref.yamagata.jp"}
 MAX_PDF = 8_000_000
 MAX_CALLS_PER_RUN = 2
@@ -162,8 +162,10 @@ def main():
         if attempts >= MAX_CALLS_PER_RUN:
             break
         attempts += 1
+        stage = "public_pdf_fetch"
         try:
             pdf = download_pdf(url)
+            stage = "gemini_model_api"
             facts = generate(pdf, key)
             # Only manifest URLs/IDs are written; AI cannot choose URLs or office names.
             cache[ref] = {
@@ -174,9 +176,9 @@ def main():
             }
             ok.append({"id": ref, "mode": "analyzed"})
         except HTTPError as error:
-            issues.append({"id": ref, "reason": f"HTTP {error.code}"})
+            issues.append({"id": ref, "stage": stage, "reason": f"HTTP {error.code}"})
         except Exception as error:
-            issues.append({"id": ref, "reason": type(error).__name__})
+            issues.append({"id": ref, "stage": stage, "reason": type(error).__name__})
     write_json(OUT, list(cache.values()))
     write_json(HEALTH, {
         "checked_at": timestamp, "enabled": True, "model": MODEL,
