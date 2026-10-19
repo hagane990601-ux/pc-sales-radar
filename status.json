@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-18T00:05:34+00:00",
+  "checked_at": "2026-10-19T00:13:34+00:00",
   "collection_status": "取得完了",
   "sources_ok": [
     {
@@ -16,7 +16,7 @@
     },
     {
       "name": "東京・北関東 建築計画ニュース",
-      "entries": 78
+      "entries": 77
     }
   ],
   "sources_errors": [],
