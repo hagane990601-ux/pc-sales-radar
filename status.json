@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-24T00:46:31+00:00",
+  "checked_at": "2026-10-25T00:21:59+00:00",
   "collection_status": "取得完了",
   "sources_ok": [
     {
@@ -12,14 +12,14 @@
     },
     {
       "name": "東北・新潟 建築計画ニュース",
-      "entries": 68
+      "entries": 72
     },
     {
       "name": "東京・北関東 建築計画ニュース",
-      "entries": 78
+      "entries": 31
     }
   ],
   "sources_errors": [],
-  "visible": 11,
+  "visible": 12,
   "baseline_status": "社内月次PDF照合は未接続。公開RSSの参考候補のみ"
 }
