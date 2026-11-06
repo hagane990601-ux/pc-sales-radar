@@ -1,22 +1,22 @@
 {
-  "checked_at": "2026-11-05T02:32:58+00:00",
+  "checked_at": "2026-11-06T02:31:54+00:00",
   "collection_status": "取得完了",
   "sources_ok": [
     {
       "name": "国土交通省 新着情報",
-      "entries": 15
+      "entries": 14
     },
     {
       "name": "防衛省 更新情報",
-      "entries": 233
+      "entries": 237
     },
     {
       "name": "東北・新潟 建築計画ニュース",
-      "entries": 27
+      "entries": 26
     },
     {
       "name": "東京・北関東 建築計画ニュース",
-      "entries": 33
+      "entries": 32
     }
   ],
   "sources_errors": [],
