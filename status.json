@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-07T01:59:25+00:00",
+  "checked_at": "2026-11-08T01:28:44+00:00",
   "collection_status": "取得完了",
   "sources_ok": [
     {
@@ -12,11 +12,11 @@
     },
     {
       "name": "東北・新潟 建築計画ニュース",
-      "entries": 25
+      "entries": 26
     },
     {
       "name": "東京・北関東 建築計画ニュース",
-      "entries": 33
+      "entries": 32
     }
   ],
   "sources_errors": [],
