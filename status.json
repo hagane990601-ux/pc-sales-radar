@@ -1,24 +1,24 @@
 {
-  "checked_at": "2026-11-16T02:13:17+00:00",
+  "checked_at": "2026-11-17T04:34:07+00:00",
   "collection_status": "一部取得失敗",
   "sources_ok": [
     {
       "name": "国土交通省 新着情報",
-      "entries": 15
+      "entries": 14
     },
     {
       "name": "防衛省 更新情報",
-      "entries": 275
+      "entries": 283
+    },
+    {
+      "name": "東京・北関東 建築計画ニュース",
+      "entries": 32
     }
   ],
   "sources_errors": [
     {
       "name": "東北・新潟 建築計画ニュース",
-      "error": "HTTP Error 503: Service Unavailable"
-    },
-    {
-      "name": "東京・北関東 建築計画ニュース",
-      "error": "HTTP Error 503: Service Unavailable"
+      "error": "HTTP Error 429: Too Many Requests"
     }
   ],
   "visible": 14,
