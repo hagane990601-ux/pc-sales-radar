@@ -3,24 +3,24 @@
     "id": "official-miyasou-20260716",
     "source_sha256": "1ca0c6a8a4e8773af88d564a2bf098c480daced6d6df6eca3bb1efc65f8a7a96",
     "source_pdf_url": "https://www.city.sendai.jp/aoba-somu-somu/documents/miyasoukihonkeikakuhonpen.pdf",
-    "analyzed_at": "2026-11-03T03:29:17+00:00",
+    "analyzed_at": "2026-11-24T06:07:56+00:00",
     "ai_state": "AI抽出・要原資料確認",
     "ai_model": "gemini-3.5-flash-lite",
     "facts": {
-      "facility_use": "宮城総合支所庁舎及び宮城保健センター",
+      "facility_use": "宮城総合支所庁舎",
       "planning_stage": "基本計画",
       "structure_type": "鉄筋コンクリート造（一部プレストレストコンクリート）",
       "span_information": "スパンは20m以下。柱が少ない大空間を確保でき、レイアウトの自由度も高い。",
       "pc_evidence": "一部プレストレストコンクリートの採用により、柱の少ない大空間を確保することで、フレキシブルな空間形成が可能となり、将来の内部改修にも対応しやすくなります。",
-      "proposal_hint": "大空間を確保する構造部材として一部プレストレストコンクリート梁の採用やプレキャスト部材の適用可能性について原図で確認する。",
-      "evidence": "24ページ「4. 各計画の方針 (2) 構造計画 ③構造種別の比較検討」"
+      "proposal_hint": "構造種別の比較検討において「鉄筋コンクリート造（一部プレストレストコンクリート）」が最適とされているため、大空間を確保する梁部へのPC梁やプレキャスト部材の採用可能性について原図を確認する。",
+      "evidence": "ページ22（4. 各計画の方針 (2) 構造計画 ③構造種別の比較検討）"
     }
   },
   {
     "id": "official-sagae-hospital-20260701",
     "source_sha256": "6722cd34821b2ca77666721fc428cbe91ea2d98f0403a0603ee2bd150aee501a",
     "source_pdf_url": "https://www.pref.yamagata.jp/documents/52604/05_kihonkeikaku.pdf",
-    "analyzed_at": "2026-11-03T03:29:17+00:00",
+    "analyzed_at": "2026-11-24T06:07:56+00:00",
     "ai_state": "AI抽出・要原資料確認",
     "ai_model": "gemini-3.5-flash-lite",
     "facts": {
@@ -29,7 +29,7 @@
       "structure_type": "資料で確認できず",
       "span_information": "資料で確認できず",
       "pc_evidence": "資料で確認できず",
-      "proposal_hint": "原図において構造形式や梁・床の架構詳細を確認し、プレキャスト部材やプレストレストコンクリートの採用可能性について検討すべきである。",
+      "proposal_hint": "原図にて大スパン空間やプレキャスト部材の採用可能性を検証すべきである。",
       "evidence": "ページ未特定"
     }
   }

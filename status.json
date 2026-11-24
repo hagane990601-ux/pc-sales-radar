@@ -1,10 +1,10 @@
 {
-  "checked_at": "2026-11-23T02:52:59+00:00",
+  "checked_at": "2026-11-24T06:07:53+00:00",
   "collection_status": "取得完了",
   "sources_ok": [
     {
       "name": "国土交通省 新着情報",
-      "entries": 15
+      "entries": 14
     },
     {
       "name": "防衛省 更新情報",
@@ -12,14 +12,14 @@
     },
     {
       "name": "東北・新潟 建築計画ニュース",
-      "entries": 23
+      "entries": 75
     },
     {
       "name": "東京・北関東 建築計画ニュース",
-      "entries": 32
+      "entries": 79
     }
   ],
   "sources_errors": [],
-  "visible": 14,
+  "visible": 15,
   "baseline_status": "社内月次PDF照合は未接続。公開RSSの参考候補のみ"
 }
