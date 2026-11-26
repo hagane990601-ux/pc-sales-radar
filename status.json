@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-25T04:55:48+00:00",
+  "checked_at": "2026-11-26T04:11:57+00:00",
   "collection_status": "取得完了",
   "sources_ok": [
     {
@@ -8,7 +8,7 @@
     },
     {
       "name": "防衛省 更新情報",
-      "entries": 311
+      "entries": 313
     },
     {
       "name": "東北・新潟 建築計画ニュース",
@@ -16,7 +16,7 @@
     },
     {
       "name": "東京・北関東 建築計画ニュース",
-      "entries": 79
+      "entries": 33
     }
   ],
   "sources_errors": [],
